@@ -1,0 +1,65 @@
+Overview
+This project aims to identify the top factors that should be considered when buying a property in Melbourne within the next three months.
+The analysis is performed using a dataset (Melbourne.csv) containing various property attributes. The code processes the data, visualizes key metrics,
+and uses statistical modeling to determine the significant factors influencing property prices.
+
+Prerequisites
+Python 3.x
+Pandas
+NumPy
+Matplotlib
+Seaborn
+Statsmodels
+Ensure you have the required packages installed. You can install them using:
+
+bash
+Copy code
+pip install pandas numpy matplotlib seaborn statsmodels
+Data Loading and Initial Exploration
+Loading the Dataset:
+
+The dataset is loaded into a pandas DataFrame using pd.read_csv.
+The number of non-null values in each column is counted.
+Any missing values are handled by dropping rows with null values.
+Basic Data Exploration:
+
+Basic statistics (describe()) and information (info()) about the dataset are displayed to understand its structure.
+Data Cleaning
+Handling Missing Data:
+
+Rows with missing data are removed to ensure clean and accurate analysis.
+Outlier Detection and Removal:
+
+The interquartile range (IQR) is calculated to detect outliers.
+Outliers are visualized using boxplots.
+Data without outliers is separated for further analysis.
+Visualization
+Boxplots:
+
+Boxplots are generated for various numerical features to visualize their distribution.
+Separate boxplots are created for specific features like Price, Landsize, BuildingArea, and Propertycount.
+Scatter Plots:
+
+Scatter plots are created to visualize the relationship between Price and other variables such as Rooms, Bedroom2,
+Bathroom, Car, Landsize, BuildingArea, and Propertycount.
+Statistical Analysis
+Correlation Analysis:
+
+Correlation between different features is calculated and visualized using a heatmap.
+A bar plot is created to show the correlation of various features with Price.
+Multivariate Regression Model:
+
+A multivariate regression model is built using the statsmodels library to identify the most significant factors influencing property prices.
+The model excludes certain features like Lattitude, Longtitude, Postcode, and YearBuilt to focus on more impactful variables.
+Key Findings
+
+The analysis reveals key factors that significantly influence property prices in Melbourne. These insights can be used by potential buyers to make informed decisions
+when purchasing property.
+
+Future Work
+Further refinement of the model could involve incorporating additional data, such as economic indicators or neighborhood-specific information.
+Additional visualization techniques and advanced modeling methods could provide deeper insights into the property market.
+
+Conclusion
+This project provides a comprehensive analysis of the Melbourne property market, highlighting crucial factors for potential buyers.
+The use of data cleaning, visualization, and statistical modeling ensures that the findings are robust and actionable.
