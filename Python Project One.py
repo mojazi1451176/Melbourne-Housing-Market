@@ -27,7 +27,7 @@ Melbourne.countblank()
 
 
 Melbourne1=Melbourne.dropna(inplace=False)
-print(Melbourne1)
+Melbourne1.head()
 
 
 # In[3]:
